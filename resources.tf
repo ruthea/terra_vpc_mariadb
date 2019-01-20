@@ -39,8 +39,9 @@ resource "aws_instance" "max1" {
   }
 }
 
-# Define instance for maxscale
+# Define instance for maxscale #2
 resource "aws_instance" "max2" {
+   count = "${var.deploy_maxscale2 ? 1 : 0}"
    ami  = "${var.ami}"
    instance_type = "${var.maxscaleinstancetype}"
    user_data = "${file("userdata_maxscale.sh")}"
@@ -55,6 +56,21 @@ resource "aws_instance" "max2" {
   }
 }
 
+# Define instance for loadtesting
+resource "aws_instance" "loadtest" {
+   count = "${var.deploy_loadtest ? 1 : 0}"
+   ami = "${var.ami}"
+   instance_type = "${var.loadtestinstancetype}"
+   user_data = "${file("userdata_loadtest.sh")}"
+   private_ip = "10.0.2.30"
+   key_name = "${var.keyname}"
+   subnet_id = "${aws_subnet.private-subnet1.id}"
+   vpc_security_group_ids = ["${aws_security_group.sgdb.id}"]
+   source_dest_check = false
+   tags {
+    Name = "maxscale2"
+   }
+}
 # Define database inside the private subnet
 resource "aws_instance" "db1" {
    ami  = "${var.ami}"
