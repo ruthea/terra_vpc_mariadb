@@ -68,7 +68,7 @@ resource "aws_instance" "loadtest" {
    vpc_security_group_ids = ["${aws_security_group.sgdb.id}"]
    source_dest_check = false
    tags {
-    Name = "maxscale2"
+    Name = "loadtest"
    }
 }
 # Define database inside the private subnet

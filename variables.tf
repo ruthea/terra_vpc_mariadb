@@ -16,7 +16,7 @@ variable "deploy_maxscale2" {
 
 variable "deploy_loadtest" {
   description = "When true an additional node will be deployed for load generation"
-  default = false
+  default = true
 }
 
 ###  Put in the name of an existing EC2 key (without the .pem)
