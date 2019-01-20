@@ -8,8 +8,9 @@ Required:
  
  Steps
  1.  Configure your aws keys
- $ aws configure
- 2.  Create (if doesn't exist) a EC2 key
+```
+ $ aws configure```
+2.  Create (if doesn't exist) a EC2 key
  3.  Put the "keyname" and "keypath" in the variables.tf
  4.  Configure the appropriate instance sizes desired in the variables.tf
  5.  Kick it off
