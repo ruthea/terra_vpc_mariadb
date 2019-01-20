@@ -60,12 +60,12 @@ variable "az3" {
 
 variable "dbinstancetype" {
   description = "Instance type for Databases"
-  default = "i3.16xlarge"
+  default = "i3.large"
 }
 
 variable "maxscaleinstancetype" {
   description = "Instance type for Maxscale"
-  default = "i3.4xlarge"
+  default = "i3.large"
 }
 
 variable "bastioninstancetype" {
