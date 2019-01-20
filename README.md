@@ -2,6 +2,7 @@
 
 Required:
  Terraform - https://learn.hashicorp.com/terraform/getting-started/install.html
+ 
  AWS CLI - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
  
  
@@ -22,7 +23,7 @@ Required:
 ```
  cd to /standard_replication
 ```
-$ cd /standard replication
+$ cd /standard replication on the bastion instance
 ```
  Trigger ansible script to build environment
  ```
@@ -42,5 +43,6 @@ $ cd /standard replication
  
  
  To tear down any artifacts built 
- 
+```
  $ terraform destroy
+```
