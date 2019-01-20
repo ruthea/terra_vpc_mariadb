@@ -13,10 +13,11 @@ Required:
  3.  Put the "keyname" and "keypath" in the variables.tf
  4.  Configure the appropriate instance sizes desired in the variables.tf
  5.  Kick it off
+```
  $ terraform init
  $ terraform plan
  $ terraform apply
- 
+```
  SSH into the outputed DNS entry
 ```
  $ ssh -i <path to ec2 key> ec2-user@<dns URL for bastion server>
