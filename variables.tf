@@ -8,11 +8,24 @@ variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
 
+### Variable to enable/disable Maxscale 2 from being deployed
+variable "deploy_maxscale2" {
+  description = "When true a 2nd maxscale instance will be deployed"
+  default = false
+}
+
+variable "deploy_loadtest" {
+  description = "When true an additional node will be deployed for load generation"
+  default = false
+}
+
+###  Put in the name of an existing EC2 key (without the .pem)
 variable "keyname" {
   description = "AWS Key to be used"
   default     = "test"
 }
 
+### Put in the path and filename of the EC2 keyname listed above
 variable "keypath" {
   description = "Path to AWS key"
   default     = "~/Downloads/test.pem"
@@ -70,5 +83,9 @@ variable "maxscaleinstancetype" {
 
 variable "bastioninstancetype" {
   description = "Bastion Instance type"
+  default = "t2.micro"
+}
+variable "loadtestinstancetype" {
+  description = "Instance Type used for load testing"
   default = "t2.micro"
 }
