@@ -17,17 +17,21 @@ Required:
  $ terraform apply
  
  SSH into the outputed DNS entry
+```
  $ ssh -i <path to ec2 key> ec2-user@<dns URL for bastion server>
- 
+```
  cd to /standard_replication
- $ cd /standard replication
- 
+```
+$ cd /standard replication
+```
  Trigger ansible script to build environment
+ ```
  $ ansible-playbook -i inventory provision.yml
- 
+ ```
  The EC2 key is copied to the bastion and placed in the /tmp directory.  You can ssh to any of the instances from the bastion server:
+ ```
  $ ssh -i /tmp/<keyname>.pem ec2-user@<choose a server from below>
-  
+ ``` 
  10.0.2.10 - MariaDB1
  10.0.3.10 - MariaDB2
  10.0.4.10 - MariaDB3
