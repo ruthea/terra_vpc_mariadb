@@ -23,6 +23,8 @@ case $instancetype in
  *)
    echo "other instance type - not attempting to mount any disks"
    ;;
+esac
+
 yum install -y wget
 wget https://raw.githubusercontent.com/ruthea/standard_replication/master/sysbench_helper
 ./sysbench_helper
