@@ -27,4 +27,5 @@ esac
 
 yum install -y wget
 wget https://raw.githubusercontent.com/ruthea/standard_replication/master/sysbench_helper
+chmod +x sysbench_helper
 ./sysbench_helper
