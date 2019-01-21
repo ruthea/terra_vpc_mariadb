@@ -4,3 +4,5 @@ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y install ansible
 git clone https://github.com/ruthea/standard_replication.git
 chmod 0600 /tmp/test.pem
+cd standard_replication
+ansible-playbook -i inventory provision.yml > provisioning.txt
