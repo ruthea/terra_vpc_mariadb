@@ -24,3 +24,5 @@ case $instancetype in
    echo "other instance type - not attempting to mount any disks"
    ;;
 esac
+
+mkdir -p /var/lib/mysql/log
