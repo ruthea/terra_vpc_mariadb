@@ -19,6 +19,11 @@ variable "deploy_loadtest" {
   default = true
 }
 
+variable "loadtest_type" {
+  description = "This is used to denote what type of testing platform to use (i.e. sysbench or hammerdb)"
+  default = "hammerdb"
+}
+
 ###  Put in the name of an existing EC2 key (without the .pem)
 variable "keyname" {
   description = "AWS Key to be used"
