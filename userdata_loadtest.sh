@@ -30,6 +30,7 @@ wget -P /tmp https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.25-1.el7.x8
 tar -xvf /tmp/mysql-5.7.25-1.el7.x86_64.rpm-bundle.tar -C /tmp
 wget -O /tmp/HammerDB-3.1-Linux-x86-64-Install https://downloads.sourceforge.net/project/hammerdb/HammerDB/HammerDB-3.1/HammerDB-3.1-Linux-x86-64-Install?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fhammerdb%2Ffiles%2FHammerDB%2FHammerDB-3.1%2FHammerDB-3.1-Linux-x86-64-Install%2Fdownload&ts=1549133620
 chmod +x /tmp/HammerDB-3.1-Linux-x86-64-Install
+yum install -y /tmp/*.rpm
 /tmp/HammerDB-3.1-Linux-x86-64-Install --mode silent
 
 
