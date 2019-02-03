@@ -18,6 +18,8 @@ puts "SETTING CONFIGURATION"
 dbset db mysql
 diset connection mysql_host 10.0.2.20
 diset connection mysql_port 3306
+diset tpcc mysql_user dba
+diset tpcc mysql_pass demo_password
 diset tpcc mysql_driver timed
 diset tpcc my_rampup 2
 diset tpcc my_duration 5
